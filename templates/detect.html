@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Intellicon</title>
+    <link rel="shortcut icon" href="../static/assets/img/logo/favicon.png" />
+    <link rel="stylesheet" href="../static/assets/css/main.css" />
+  </head>
+
+  <body>
+    <!-- Preloader Start Here -->
+    <div class="preloader__wrap">
+      <div class="preloader__box">
+        <div class="robot">
+          <img src="../static/assets/img/elements/ponkhi.png" alt="img" />
+        </div>
+      </div>
+    </div>
+    <!-- Preloader End Here -->
+
+    <!-- Header top Here -->
+    <header class="header-section">
+      <div class="container">
+        <div class="header-wrapper">
+          <div class="logo-menu">
+            <a href="index.html" class="logo">
+              <img src="../static/assets/img/logo/logo.png" alt="logo" />
+            </a>
+            <a href="index.html" class="small__logo d-xl-none">
+              <!-- <img src="assets/img/logo/favicon.png" alt="logo" /> -->
+              <img src="../static/assets/img/logo/favicon.png" alt="logo" />
+            </a>
+          </div>
+          <ul class="main-menu">
+            <li>
+              <a href="{{ url_for('home') }}" class="d-flex"> Home </a>
+            </li>
+            <li>
+              <a href="{{ url_for('home') }}" class="d-flex"> About </a>
+            </li>
+            <li class="grid__style">
+              <a href="{{ url_for('detect') }}" class="d-flex"> Detect </a>
+            </li>
+            <li class="grid__style">
+              <a href="{{ url_for('contact') }}" class="d-flex"> Contact </a>
+            </li>
+
+            <a href="{{ url_for('logout') }}" class="cmn--btn">
+              <span> Logout </span>
+            </a>
+          </ul>
+        </div>
+      </div>
+    </header>
+    <!-- Header top End -->
+
+    <!-- Banner Here -->
+    <section class="banner__section bannerbg">
+      <!--Mask-->
+      <div class="banner__bgmask">
+        <img src="../static/assets/img/elements/box-element.png" alt="mask" />
+      </div>
+      <!--Mask-->
+      <!--Container-->
+      <div class="container">
+        <div class="banner__wrapper">
+            <div class="col-xxl-6 col-xl-6 col-lg-6">
+              <div class="banner__content">
+                
+                <img src="{{ url_for('webapp') }}"   alt="Upload video">
+
+                </div>
+                <div class="ai__text">
+                  <img src="../static/assets/img/elements/t-element.png" alt="ai" />
+                </div>
+              </div>
+            </div>
+            
+            
+          </div>
+        </div>
+      </div>
+      <!--Container-->
+      <!--Elements-->
+      <div class="light__element1">
+        <img src="../static/assets/img/elements/light-elements.png" alt="light" />
+      </div>
+      <div class="light__element2">
+        <img src="../static/assets/img/elements/light-elements.png" alt="light" />
+      </div>
+      <div class="light__element3">
+        <img src="../static/assets/img/elements/light-elements.png" alt="light" />
+      </div>
+      <div class="light__element4">
+        <img src="../static/assets/img/elements/light-elements.png" alt="light" />
+      </div>
+      <div class="light__element5">
+        <img src="../static/assets/img/elements/light-elements.png" alt="light" />
+      </div>
+      <!--Elements-->
+    </section>
+    <!-- Banner End -->
+
+
+    <!--Jquery 3 6 0 Min Js-->
+    <script
+      data-cfasync="false"
+      src="../../cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"
+    ></script>
+    <script src="../static/assets/js/jquery-3.6.0.min.js"></script>
+    <!--Bootstrap bundle Js-->
+    <script src="../static/assets/js/bootstrap.bundle.min.js"></script>
+    <!--Viewport Jquery Js-->
+    <script src="../static/assets/js/viewport.jquery.js"></script>
+    <!--Odometer min Js-->
+    <script src="../static/assets/js/odometer.min.js"></script>
+    <!--Magnifiw Popup Js-->
+    <script src="../static/assets/js/jquery.magnific-popup.min.js"></script>
+    <!--Wow min Js-->
+    <script src="../static/assets/js/wow.min.js"></script>
+    <!--Owl carousel min Js-->
+    <script src="../static/assets/js/owl.carousel.min.js"></script>
+    <!--Prijm Js-->
+    <script src="../static/assets/js/prism.js"></script>
+    <!--main Js-->
+    <script src="../static/assets/js/main.js"></script>
+  </body>
+</html>

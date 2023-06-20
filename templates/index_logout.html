@@ -1,0 +1,587 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Intellicon</title>
+    <link rel="shortcut icon" href="../static/assets/img/logo/favicon.png" />
+    <link rel="stylesheet" href="../static/assets/css/main.css" />
+  </head>
+
+  <body>
+    <!-- Preloader Start Here -->
+    <div class="preloader__wrap">
+      <div class="preloader__box">
+        <div class="robot">
+          <img src="../static/assets/img/elements/ponkhi.png" alt="img" />
+        </div>
+      </div>
+    </div>
+    <!-- Preloader End Here -->
+
+    <!-- Header top Here -->
+    <header class="header-section">
+      <div class="container">
+        <div class="header-wrapper">
+          <div class="logo-menu">
+            <a href="index.html" class="logo">
+              <img src="../static/assets/img/logo/logo.png" alt="logo" />
+            </a>
+            <a href="index.html" class="small__logo d-xl-none">
+              <!-- <img src="assets/img/logo/favicon.png" alt="logo" /> -->
+              <img src="../static/assets/img/logo/favicon.png" alt="logo" />
+            </a>
+          </div>
+          <ul class="main-menu">
+            <li>
+              <a href="{{ url_for('home') }}" class="d-flex"> Home </a>
+            </li>
+            <li>
+              <a href="{{ url_for('home') }}" class="d-flex"> About </a>
+            </li>
+            <li class="grid__style">
+              <a href="{{ url_for('detect') }}" class="d-flex"> Detect </a>
+            </li>
+            <li class="grid__style">
+              <a href="{{ url_for('contact') }}" class="d-flex"> Contact </a>
+            </li>
+
+            <a href="{{ url_for('logout') }}" class="cmn--btn">
+              <span> Logout </span>
+            </a>
+          </ul>
+        </div>
+      </div>
+    </header>
+    <!-- Header top End -->
+
+    <!-- Banner Here -->
+    <section class="banner__section bannerbg">
+      <!--Mask-->
+      <div class="banner__bgmask">
+        <img src="../static/assets/img/elements/box-element.png" alt="mask" />
+      </div>
+      <!--Mask-->
+      <!--Container-->
+      <div class="container">
+        <div class="banner__wrapper">
+          <div class="row g-4 justify-content-between">
+            <div class="col-xxl-6 col-xl-6 col-lg-6">
+              <div class="banner__content">
+                <div class="content__box">
+                  <span class="d3 mb-0 wow fadeInUp" data-wow-duration="2s">
+                    Unleash the
+                  </span>
+                  <span class="d3 wow fadeInDown" data-wow-duration="4s">
+                    potential of <span class="theme">AI</span> and
+                    <span class="theme2">machine</span> learning
+                  </span>
+                  <p class="wow fadeInUp" data-wow-duration="2s">
+                    We harness the power of machine learning algorithms to
+                    develop groundbreaking solution for student uniform
+                    monitoring.
+                  </p>
+                  <div class="btg__grp wow">
+                    <a href="{{ url_for('login') }}" class="cmn--btn">
+                      <span>Get Started</span>
+                    </a>
+                  </div>
+                </div>
+                <div class="ai__text">
+                  <img src="../static/assets/img/elements/t-element.png" alt="ai" />
+                </div>
+                <div class="ai__elements">
+                  <img src="../static/assets/img/elements/ai-element.png" alt="ai" />
+                </div>
+              </div>
+            </div>
+            <div class="col-xxl-1 col-xl-1 col-lg-1"></div>
+            <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-6 col-sm-8">
+              <div class="banner__thumb">
+                <div class="thumb">
+                  <img src="../static/assets/img/banner/banner1.png" alt="banner" />
+                </div>
+                <div class="rocket__element">
+                  <img
+                    src="../static/assets/img/elements/rocket-element.png"
+                    alt="rocket"
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="col-xxl-1 col-xl-1 col-lg-1"></div>
+          </div>
+        </div>
+      </div>
+      <!--Container-->
+      <!--Elements-->
+      <div class="ball__element">
+        <img src="../static/assets/img/elements/ball-element.png" alt="ball" />
+      </div>
+      <div class="banner__mask">
+        <img src="../static/assets/img/elements/shape-element1.png" alt="mask" />
+      </div>
+      <div class="dark__mask d-none">
+        <img src="../static/assets/img/elements/banner-shape1-dark.png" alt="mask" />
+      </div>
+      <div class="light__element1">
+        <img src="../static/assets/img/elements/light-elements.png" alt="light" />
+      </div>
+      <div class="light__element2">
+        <img src="../static/assets/img/elements/light-elements.png" alt="light" />
+      </div>
+      <div class="light__element3">
+        <img src="../static/assets/img/elements/light-elements.png" alt="light" />
+      </div>
+      <div class="light__element4">
+        <img src="../static/assets/img/elements/light-elements.png" alt="light" />
+      </div>
+      <div class="light__element5">
+        <img src="../static/assets/img/elements/light-elements.png" alt="light" />
+      </div>
+      <!--Elements-->
+    </section>
+    <!-- Banner End -->
+
+    <!-- About Here -->
+    <section class="about__section bg__white pt-120 pb__60">
+      <!--Container-->
+      <div class="container">
+        <div class="row align-items-center flex-row-reverse">
+          <!--about content-->
+          <div class="col-xxl-6 col-xl-6 col-lg-6">
+            <div class="about__content">
+              <div class="section__header">
+                <h2 class="wow fadeInUp" data-wow-duration="2s">
+                  Introducing Our Revolutionary Student Uniform Monitoring
+                  Solution
+                </h2>
+                <p class="wow fadeInDown" data-wow-duration="2s">
+                  With our cutting-edge solution, educational institutions can
+                  effortlessly enforce uniform policies, promote discipline, and
+                  create a focused learning environment. Our machine learning
+                  model analyzes real-time video feeds and instantly detects any
+                  deviations from the prescribed uniform, providing
+                  administrators with actionable insights and enabling swift
+                  intervention.
+                </p>
+              </div>
+              <ul class="about__chack wow fadeInDown">
+                <li>
+                  <span class="icon">
+                    <i class="material-symbols-outlined"> task_alt </i>
+                  </span>
+                  <span> Talented Team </span>
+                </li>
+                <li>
+                  <span class="icon">
+                    <i class="material-symbols-outlined"> task_alt </i>
+                  </span>
+                  <span> 100% Security System </span>
+                </li>
+                <li>
+                  <span class="icon">
+                    <i class="material-symbols-outlined"> task_alt </i>
+                  </span>
+                  <span> High-Quality Results </span>
+                </li>
+                <li>
+                  <span class="icon">
+                    <i class="material-symbols-outlined"> task_alt </i>
+                  </span>
+                  <span> 24 Hours Supports </span>
+                </li>
+              </ul>
+              <a href="about.html" class="cmn--btn">
+                <span>Read More</span>
+              </a>
+            </div>
+          </div>
+          <!--about content-->
+          <div class="col-xxl-1 col-xl-1 col-lg-1"></div>
+          <!--about thumb-->
+          <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-9 col-sm-9">
+            <div class="about__thumb">
+              <div class="brain__element">
+                <img src="../static/assets/img/elements/brain-element.png" alt="breain" />
+              </div>
+              <img src="../static/assets/img/about/about1.png" alt="about" />
+            </div>
+          </div>
+          <!--about thumb-->
+          <div class="col-xxl-1 col-xl-1 col-lg-1"></div>
+        </div>
+      </div>
+      <!--Container-->
+      <!--Shape-->
+      <div class="about__shape1">
+        <img src="../static/assets/img/elements/ashape-elements.png" alt="about" />
+      </div>
+      <!--Shape-->
+      <!--element-->
+      <div class="light__element1">
+        <img src="../static/assets/img/elements/light-elements.png" alt="light" />
+      </div>
+      <div class="light__element2">
+        <img src="../static/assets/img/elements/light-elements.png" alt="light" />
+      </div>
+      <div class="light__element3">
+        <img src="../static/assets/img/elements/light-elements.png" alt="light" />
+      </div>
+      <div class="light__element4">
+        <img src="../static/assets/img/elements/light-elements.png" alt="light" />
+      </div>
+      <div class="light__element5">
+        <img src="../static/assets/img/elements/light-elements.png" alt="light" />
+      </div>
+      <!--element-->
+    </section>
+    <!-- About End -->
+
+    <!-- Feature Here -->
+    <section class="feature__section bgsection pt-120 pb-120">
+      <!--container-->
+      <div class="container">
+        <!--Section header-->
+        <div
+          class="section__header section__center pb__60 wow fadeInUp"
+          data-wow-duration="2s"
+        >
+          <h2>Key Services Features</h2>
+          <p class="pb__32">
+            AI is the broader concept of machines being able to carry out tasks
+            in a way that would normally require human intelligence.
+          </p>
+          <a href="service-details.html" class="cmn--btn border__btn">
+            <span> Get Started </span>
+          </a>
+        </div>
+        <!--Section header-->
+        <div class="row g-5 justify-content-center align-items-center">
+          <!--col grid-->
+          <div class="col-sm-6 col-xl-4">
+            <div class="feature__component__wrap feature__right__align">
+              <div class="feature__items wow fadeInUp" data-wow-duration="1s">
+                <div class="icon">
+                  <img src="../static/assets/img/feature/man.png" alt="icon" />
+                </div>
+                <div class="content">
+                  <h4>Real-time Uniform Detection</h4>
+                  <p>
+                    Instantly monitor uniforms for compliance, ensuring a
+                    disciplined learning environment.
+                  </p>
+                </div>
+              </div>
+
+              <div class="feature__items wow fadeInUp" data-wow-duration="2.2s">
+                <div class="icon">
+                  <img src="../static/assets/img/feature/cloud.png" alt="icon" />
+                </div>
+                <div class="content">
+                  <h4>Accurate Results</h4>
+                  <p>
+                    Reliable identification of correct uniforms, maintaining
+                    consistency in enforcement.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!--col grid-->
+          <div class="col-8 order-sm-3 order-xl-2 col-xl-4">
+            <div class="feature__thumb">
+              <img src="../static/assets/img/feature/feature.png" alt="feature" />
+            </div>
+          </div>
+          <!--col grid-->
+          <div class="col-sm-6 order-sm-2 col-xl-4">
+            <div class="feature__component__wrap">
+              <div class="feature__items wow fadeInUp" data-wow-duration="2.8s">
+                <div class="icon">
+                  <img src="../static/assets/img/feature/neurology.png" alt="icon" />
+                </div>
+                <div class="content">
+                  <h4>Seamless Integration</h4>
+                  <p>
+                    Effortless implementation and user-friendly interface for
+                    streamlined uniform monitoring.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!--col grid-->
+        </div>
+      </div>
+      <!--container-->
+      <!--elements-->
+      <div class="feature__rocket">
+        <img src="../static/assets/img/elements/feature-rocket.png" alt="rocket" />
+      </div>
+      <div class="feature__ai">
+        <img src="../static/assets/img/elements/feature-ali.png" alt="rocket" />
+      </div>
+      <div class="light__element1">
+        <img src="../static/assets/img/elements/light-elements.png" alt="light" />
+      </div>
+      <div class="light__element2">
+        <img src="../static/assets/img/elements/light-elements.png" alt="light" />
+      </div>
+      <div class="light__element3">
+        <img src="../static/assets/img/elements/light-elements.png" alt="light" />
+      </div>
+      <div class="light__element4">
+        <img src="../static/assets/img/elements/light-elements.png" alt="light" />
+      </div>
+      <!--elements-->
+    </section>
+    <!-- Feature End -->
+
+    <!-- Qualified Here -->
+    <section class="qualified__section bg__white pt-120 pb-120">
+      <!--container-->
+      <div class="container">
+        <div class="row align-items-center">
+          <!--col-->
+          <div class="col-lg-6">
+            <div class="qualified__content">
+              <div class="section__header wow fadeInUp" data-wow-duration="2s">
+                <h2>
+                  Save your time and money by choosing our qualified services
+                </h2>
+                <p>
+                  Choose us for the ultimate student uniform monitoring
+                  solution. With unmatched expertise in machine learning
+                  algorithms and a commitment to cutting-edge technology, we
+                  deliver a customized approach tailored to your institution's
+                  needs. Seamlessly integrating into your existing systems, our
+                  solution ensures hassle-free implementation. Count on our
+                  reliable support throughout your journey, as we prioritize
+                  long-term partnerships and prompt assistance. Experience the
+                  difference as we promote discipline, enhance compliance, and
+                  create an optimal learning environment together. Trust us to
+                  revolutionize your student uniform monitoring and empower your
+                  educational institution.
+                </p>
+              </div>
+              
+            </div>
+          </div>
+          <!--col-->
+          <div class="col-lg-1"></div>
+          <!--col-->
+          <div class="col-lg-4">
+            <div class="qualified__thumb">
+              <img src="../static/assets/img/about/qualified.png" alt="qualified" />
+            </div>
+          </div>
+          <!--col-->
+        </div>
+      </div>
+      <!--container-->
+      <!--elements-->
+      <div class="light__element1">
+        <img src="../static/assets/img/elements/light-elements.png" alt="light" />
+      </div>
+      <div class="light__element2">
+        <img src="../static/assets/img/elements/light-elements.png" alt="light" />
+      </div>
+      <div class="light__element3">
+        <img src="../static/assets/img/elements/light-elements.png" alt="light" />
+      </div>
+      <!--elements-->
+    </section>
+    <!-- Qualified End -->
+
+    <!-- Footer Here -->
+    <footer class="footer__section">
+      <!--shpa-->
+      <div class="footer__shape">
+        <img src="../static/assets/img/elements/footer-shape.png" alt="img" />
+      </div>
+      <div class="footer__darkshpae">
+        <img src="../static/assets/img/elements/footer-shapedark.png" alt="img" />
+      </div>
+      <!--shpa-->
+      <div class="container">
+        <div class="footer__wrapper">
+          <div class="footer__top">
+            <div class="row g-5">
+              <div class="col-xxl-3 col-xl-3 col-lg-3 col-md-6 col-sm-6">
+                <div class="footer__widget">
+                  <div class="widget__head">
+                    <a href="index.html" class="footer__logo">
+                      <img src="../static/assets/img/logo/logo.png" alt="logo" />
+                    </a>
+                  </div>
+                  <p class="pb__20">
+                    Artificial Intelligence (AI) and Machine Learning (ML) are
+                    closely related technologies that enable computers to learn
+                    from data and make predictions
+                  </p>
+                  <ul class="social">
+                    <li>
+                      <a href="javascript:void(0)" class="social__item">
+                        <span class="icon">
+                          <img
+                            src="../static/assets/img/svg-icon/facebook.svg"
+                            alt="svg"
+                          />
+                        </span>
+                      </a>
+                    </li>
+                    <li>
+                      <a
+                        href="javascript:void(0)"
+                        class="social__item social__itemtwo"
+                      >
+                        <span class="icon">
+                          <img
+                            src="../static/assets/img/svg-icon/instagram.svg"
+                            alt="svg"
+                          />
+                        </span>
+                      </a>
+                    </li>
+                    <li>
+                      <a
+                        href="javascript:void(0)"
+                        class="social__item social__itemthree"
+                      >
+                        <span class="icon">
+                          <img
+                            src="../static/assets/img/svg-icon/twitter.svg"
+                            alt="svg"
+                          />
+                        </span>
+                      </a>
+                    </li>
+                    <li>
+                      <a
+                        href="javascript:void(0)"
+                        class="social__item social__itemfour"
+                      >
+                        <span class="icon">
+                          <img
+                            src="../static/assets/img/svg-icon/linkedin.svg"
+                            alt="svg"
+                          />
+                        </span>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-xxl-3 col-xl-3 col-lg-3 col-md-6 col-sm-6">
+                <div class="footer__widget">
+                  <div class="widget__head">
+                    <h4>Quick Links</h4>
+                  </div>
+                  <div class="widget__link">
+                    <a href="about.html" class="link"> About us </a>
+                    <a href="studies-1.html" class="link"> Home </a>
+                    <a href="faq.html" class="link"> Contact </a>
+                  </div>
+                </div>
+              </div>
+              <div class="col-xxl-3 col-xl-3 col-lg-3 col-md-6 col-sm-6">
+                <div class="footer__widget">
+                  <div class="widget__head">
+                    <h4>Services</h4>
+                  </div>
+                  <div class="widget__link">
+                    <a href="shop.html" class="link"> Detection </a>
+                    <a href="signup.html" class="link"> Installation </a>
+                    <a href="signup.html" class="link"> Training Datasets </a>
+                    <a href="signup.html" class="link"> Deployment </a>
+                  </div>
+                </div>
+              </div>
+              <div class="col-xxl-3 col-xl-3 col-lg-3 col-md-6 col-sm-6">
+                <div class="footer__widget">
+                  <div class="widget__head">
+                    <h4>Contact</h4>
+                  </div>
+                  <div class="widget__link">
+                    <a href="javascript:void(0)" class="footer__contact__items">
+                      <span class="icon">
+                        <i class="material-symbols-outlined"> add_call </i>
+                      </span>
+                      <span class="fcontact__content"> +92 3304089244 </span>
+                    </a>
+                    <a href="javascript:void(0)" class="footer__contact__items">
+                      <span class="icon icontwo">
+                        <i class="material-symbols-outlined">
+                          mark_as_unread
+                        </i>
+                      </span>
+                      <span class="fcontact__content">
+                        <span
+                          class="__cf_email__"
+                          >hamzaaamir6@gmail.com</span
+                        >
+                      </span>
+                    </a>
+                    <a href="javascript:void(0)" class="footer__contact__items">
+                      <span class="icon iconthree">
+                        <span class="material-symbols-outlined">
+                          pin_drop
+                        </span>
+                      </span>
+                      <span class="fcontact__content">
+                        Air University, Islamabad
+                      </span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="footer__bottom">
+            <p>
+              Copyright &copy;2023
+              <a href="javascript:void(0)" class="intellicon">Intellicon</a>.
+              Designed By
+              <a href="#" class="theme"
+                >Hamza Aamir</a
+              >
+            </p>
+          </div>
+        </div>
+      </div>
+      <!--footer mask-->
+      <div class="footer__mask">
+        <img src="../static/assets/img/elements/box-element.png" alt="mask" />
+      </div>
+      <!--footer mask-->
+    </footer>
+    <!-- Footer End -->
+
+    <!--Jquery 3 6 0 Min Js-->
+    <script
+      data-cfasync="false"
+      src="../../cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"
+    ></script>
+    <script src="../static/assets/js/jquery-3.6.0.min.js"></script>
+    <!--Bootstrap bundle Js-->
+    <script src="../static/assets/js/bootstrap.bundle.min.js"></script>
+    <!--Viewport Jquery Js-->
+    <script src="../static/assets/js/viewport.jquery.js"></script>
+    <!--Odometer min Js-->
+    <script src="../static/assets/js/odometer.min.js"></script>
+    <!--Magnifiw Popup Js-->
+    <script src="../static/assets/js/jquery.magnific-popup.min.js"></script>
+    <!--Wow min Js-->
+    <script src="../static/assets/js/wow.min.js"></script>
+    <!--Owl carousel min Js-->
+    <script src="../static/assets/js/owl.carousel.min.js"></script>
+    <!--Prijm Js-->
+    <script src="../static/assets/js/prism.js"></script>
+    <!--main Js-->
+    <script src="../static/assets/js/main.js"></script>
+  </body>
+
+  <!-- Mirrored from pixner.net/intellicon/intellicon/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 20 May 2023 12:14:15 GMT -->
+</html>

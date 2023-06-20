@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Intellicon - Login</title>
+    <link rel="shortcut icon" href="../static/assets/img/logo/favicon.png" />
+    <link rel="stylesheet" href="../static/assets/css/main.css" />
+
+    <style>
+      body {
+        background-color: #0b1d3d;
+      }
+
+      .login-section {
+        margin: 0 auto;
+        padding: 50px;
+        max-width: 700px;
+      }
+
+      .login-section h2 {
+        text-align: center;
+        margin-bottom: 20px;
+      }
+
+      .form-outer {
+        margin-top: 10rem;
+        border-radius: 25px;
+        background: #051838;
+        border: 1px solid rgb(41, 41, 230);
+      }
+
+      .but {
+        border-radius: 5px;
+        padding: 10px 25px 14px;
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 150%;
+        display: inline-block;
+        text-transform: capitalize;
+        position: relative;
+        overflow: hidden;
+        border: none;
+        background: #452ff4;
+        color: #fff;
+      }
+
+      .but:hover {
+        transition: 0.3s ease-in-out;
+        background: #3fca90;
+        color: black;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Preloader Start Here -->
+    <div class="preloader__wrap">
+      <div class="preloader__box">
+        <div class="robot">
+          <img src="../static/assets/img/elements/ponkhi.png" alt="img" />
+        </div>
+      </div>
+    </div>
+    <!-- Preloader End Here -->
+
+    <!-- Header top Here -->
+    <header class="header-section">
+      <div class="container">
+        <div class="header-wrapper">
+          <div class="logo-menu">
+            <a href="index.html" class="logo">
+              <img src="../static/assets/img/logo/logo.png" alt="logo" />
+            </a>
+            <a href="index.html" class="small__logo d-xl-none">
+              <!-- <img src="assets/img/logo/favicon.png" alt="logo" /> -->
+              <img src="../static/assets/img/logo/favicon.png" alt="logo" />
+            </a>
+          </div>
+          <ul class="main-menu">
+            <li>
+              <a href="{{ url_for('home') }}" class="d-flex"> Home </a>
+            </li>
+            <li>
+              <a href="{{ url_for('home') }}" class="d-flex"> About </a>
+            </li>
+            <li class="grid__style">
+              <a href="{{ url_for('detect') }}" class="d-flex"> Detect </a>
+            </li>
+            <li class="grid__style">
+              <a href="{{ url_for('contact') }}" class="d-flex"> Contact </a>
+            </li>
+
+            <a href="{{ url_for('login') }}" class="cmn--btn">
+              <span> Login </span>
+            </a>
+
+            <a href="{{ url_for('signup') }}" class="cmn--btn">
+              <span> Signup </span>
+            </a>
+          </ul>
+        </div>
+      </div>
+    </header>
+    <!-- Header top End -->
+
+    <!-- Login Form Section -->
+    <section class="login-section form-outer">
+      <div class="container">
+        <div class="login-wrapper">
+          <h2 class="text-light">Login</h2>
+          <h2 class="text-light">{{msg}}</h2>
+          <form action="http://127.0.0.1:5000/loginn" method="POST">
+            <div class="form-group">
+              <label for="email">Email:</label>
+              <input
+                type="email"
+                class="form-control mt-2 mb-4"
+                id="email"
+                name="email"
+                required
+                placeholder="Enter Your Email"
+              />
+            </div>
+            <div class="form-group">
+              <label for="password">Password:</label>
+              <input
+                type="password"
+                class="form-control mt-2 mb-4"
+                id="password"
+                name="password"
+                required
+                placeholder="Enter Your Password"
+              />
+            </div>
+            <button type="submit" class="but">Submit</button>
+          </form>
+        </div>
+      </div>
+    </section>
+    <!-- Login Form Section End -->
+
+    <script
+      data-cfasync="false"
+      src="../../cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"
+    ></script>
+    <script src="../static/assets/js/jquery-3.6.0.min.js"></script>
+    <!--Bootstrap bundle Js-->
+    <script src="../static/assets/js/bootstrap.bundle.min.js"></script>
+    <!--Viewport Jquery Js-->
+    <script src="../static/assets/js/viewport.jquery.js"></script>
+    <!--Odometer min Js-->
+    <script src="../static/assets/js/odometer.min.js"></script>
+    <!--Magnifiw Popup Js-->
+    <script src="../static/assets/js/jquery.magnific-popup.min.js"></script>
+    <!--Wow min Js-->
+    <script src="../static/assets/js/wow.min.js"></script>
+    <!--Owl carousel min Js-->
+    <script src="../static/assets/js/owl.carousel.min.js"></script>
+    <!--Prijm Js-->
+    <script src="../static/assets/js/prism.js"></script>
+    <!--main Js-->
+    <script src="../static/assets/js/main.js"></script>
+  </body>
+</html>
