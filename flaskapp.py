@@ -4,7 +4,7 @@ import cv2
 import os
 app = Flask(__name__)
 
-app.config['SECRET_KEY'] = 'hamza'
+app.config['SECRET_KEY'] = 'Usama'
 
 # Main Yolo Detection function
 def generate_frames_web(path_x):
@@ -50,7 +50,7 @@ def loginn():
     if request.method == "POST":
         email = request.form['email']
         password = request.form['password']
-        if (email=='hamzaaamir6@gmail.com' and password=='admin'):
+        if (email=='usamamalik2033@gmail.com' and password=='admin'):
             session['email'] = email
             return render_template('detect.html', email=email)
         else:
@@ -66,6 +66,11 @@ def logout():
 def signup():
     session.clear()
     return render_template('signup.html')
+
+@app.route('/about')
+def about():
+    session.clear()
+    return render_template('about.html')
 
 if __name__ == "__main__":
     app.run(debug=True)
