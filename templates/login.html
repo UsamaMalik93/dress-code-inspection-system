@@ -109,8 +109,12 @@
       <div class="container">
         <div class="login-wrapper">
           <h2 class="text-light">Login</h2>
-          <h2 class="text-light">{{msg}}</h2>
-          <form action="http://127.0.0.1:5000/loginn" method="POST">
+          {% if msg %}
+            <div class="alert alert-danger" role="alert">
+              {{ msg }}
+            </div>
+          {% endif %}
+          <form action="{{ url_for('loginn') }}" method="POST">
             <div class="form-group">
               <label for="email">Email:</label>
               <input
